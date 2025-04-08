@@ -25,13 +25,12 @@ jobs:
 
       - name: Install dependencies and build React app
         run: |
-          cd ui
           npm install
           npm run build
 
       - name: Zip artifact for deployment
         run: |
-          cd ui/build
+          cd build
           zip -r ../../release.zip .
 
       - name: Upload artifact for deployment job
