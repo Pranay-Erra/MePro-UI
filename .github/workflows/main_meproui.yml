@@ -22,13 +22,12 @@ jobs:
 
       - name: Install dependencies and build React app
         run: |
-          cd ui
           npm install
           npm run build
 
       - name: Zip build folder
         run: |
-          cd ui/build
+          cd build
           zip -r react-app.zip .
           mv react-app.zip ../../../react-app.zip
 
